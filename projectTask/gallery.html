@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+<iframe src="main.html" style="width:100%; height:60px; border:none;"></iframe>
+  <!-- Header Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Event Gallery</h1>
+      <p>Capturing moments of innovation and discovery</p>
+    </div>
+  </section>
+
+  <div class="filter-wrapper">
+  <!-- Radio Inputs -->
+  <input type="radio" name="category" id="all" checked hidden />
+  <input type="radio" name="category" id="keynotes" hidden />
+  <input type="radio" name="category" id="demos" hidden />
+  <input type="radio" name="category" id="networking" hidden />
+  <input type="radio" name="category" id="workshops" hidden />
+  <input type="radio" name="category" id="exhibitions" hidden />
+
+  <!-- Filter Buttons -->
+  <section class="categories">
+    <h2 class="filter-heading">Browse by Category</h2>
+    <div class="buttons">
+      <label for="all">All Photos</label>
+      <label for="keynotes">Keynotes</label>
+      <label for="demos">Tech Demos</label>
+      <label for="networking">Networking</label>
+      <label for="workshops">Workshops</label>
+      <label for="exhibitions">Exhibitions</label>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="gallery-grid">
+      <div class="card" data-category="keynotes"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Keynote" /></div>
+      <div class="card" data-category="networking"><img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg" alt="Audience" /></div>
+      <div class="card" data-category="demos"><img src="https://images.pexels.com/photos/8294666/pexels-photo-8294666.jpeg" alt="Robot" /></div>
+      <div class="card" data-category="demos"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Tech Demo" /></div>
+      <div class="card" data-category="exhibitions"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Nature" /></div>
+      <div class="card" data-category="exhibitions"><img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45" alt="Data Center" /></div>
+      <div class="card" data-category="workshops"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Coding" /></div>
+      <div class="card" data-category="networking"><img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" alt="Conference" /></div>
+      <div class="card" data-category="workshops"><img src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg" alt="Laptop" /></div>
+      <div class="card" data-category="workshops"><img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9" alt="Developer" /></div>
+      <div class="card" data-category="keynotes"><img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" alt="Speaker" /></div>
+      <div class="card" data-category="exhibitions"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f" alt="Exhibition" /></div>
+    </div>
+  </section>
+</div>
+  
+  <section class="cta">
+    <h3>Be a Part of the Story</h3>
+    <p>Secure your spot at the most anticipated technology event of 2025</p>
+    <div class="cta-buttons">
+      <button class="btn primary">Register Now</button>
+      <button class="btn secondary">View Schedule</button>
+    </div>
+  </section>  
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Future Gadget Expo</h3>
+        <p>The premier technology exhibition showcasing tomorrow’s innovations today.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Speakers</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>info@futuregadgetexpo.com</p>
+        <p>(555) 123-4567</p>
+        <p>San Francisco, CA</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2024 Future Gadget Expo. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

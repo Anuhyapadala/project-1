@@ -1,0 +1,364 @@
+/* Future Gadget Expo 2025 - Main Stylesheet */
+
+/* ==========================================================================
+   CSS Custom Properties (Variables)
+   ========================================================================== */
+:root {
+    /* Colors - Light Theme */
+    --color-primary: #6366f1;
+    --color-primary-dark: #4f46e5;
+    --color-secondary: #06b6d4;
+    --color-accent: #f59e0b;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* Text Colors */
+    --color-text-primary: #37371f;
+    --color-text-secondary: #6b7280;
+    --color-text-muted: #9ca3af;
+    --color-text-inverse: #ffffff;
+
+    /* Background Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f9fafb;
+    --color-bg-tertiary: #f3f4f6;
+    --color-border: #e5e7eb;
+
+    /* Gradients */
+    /* --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+
+    --gradient-primary: linear-gradient(135deg, #a3bffa 0%, #c3aed6 100%);
+    --gradient-hero: linear-gradient(135deg, #c3d9ff 0%, #d9c2f0 100%);
+
+
+    /* Typography */
+    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3rem;
+
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.25s ease-in-out;
+    --transition-slow: 0.35s ease-in-out;
+
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+}
+
+/* Dark Theme Variables */
+.theme--dark {
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted: #9ca3af;
+    --color-text-inverse: #1f2937;
+
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #1f2937;
+    --color-bg-tertiary: #374151;
+    --color-border: #374151;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 var(--spacing-4) 0;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
+
+p {
+    margin: 0 0 var(--spacing-4) 0;
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.hero {
+    background: #dfe9f3;
+    background: linear-gradient(to right, #add8e6, #d8b4f8);
+
+    text-align: center;
+    padding: 5rem 1.25rem;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+
+
+.wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 28px;
+}
+
+
+/* General Styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #faf9f7;
+    color: #333;
+    line-height: 1.6;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary)
+}
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-2) 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-left: 0.9375rem;
+}
+
+
+nav {
+    flex: 1;
+    text-align: center;
+
+}
+
+nav a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    font-size: medium;
+
+}
+
+.icon {
+    color: black;
+}
+
+nav a:hover,
+nav a:active {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.125rem;
+    border-radius: 0.375rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn.small {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* styles.css */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-primary);
+    z-index: 1000;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5625rem;
+}
+
+/* Navbar links */
+nav a {
+    margin-right: 1.25rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: bold;
+}
+
+/* Iframe styling */
+.content-frame {
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* Adjust height based on header */
+    border: none;
+}
+/* Hero section layout */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+/* Animate hero content on page load */
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFade 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Keyframes for smooth upward transition */
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

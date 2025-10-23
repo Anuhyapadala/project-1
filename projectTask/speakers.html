@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World-Class Speakers | Future Gadget Expo</title>
+  <link rel="stylesheet" href="speakers.css" />
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <iframe src="main.html" style="width:100%; height:60px; border:none;"></iframe>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>World-Class Speakers</h1>
+      <p>Learn from industry pioneers and visionary leaders</p>
+    </div>
+  </section>
+
+  <div class="filter-wrapper">
+    <!-- Radio Inputs (must be siblings of .speakers) -->
+    <input type="radio" name="category" id="all" checked hidden />
+    <input type="radio" name="category" id="ai" hidden />
+    <input type="radio" name="category" id="robotics" hidden />
+    <input type="radio" name="category" id="space" hidden />
+    <input type="radio" name="category" id="biotech" hidden />
+    <input type="radio" name="category" id="sustainability" hidden />
+
+    <!-- Filter Labels -->
+    <div class="filter-section">
+      <h2 class="filter-heading">Filter by Category</h2>
+      <div class="filters">
+        <label for="all">All</label>
+        <label for="ai">AI & Machine Learning</label>
+        <label for="robotics">Robotics</label>
+        <label for="space">Space Technology</label>
+        <label for="biotech">Biotechnology</label>
+        <label for="sustainability">Sustainability</label>
+      </div>
+    </div>
+
+    <!-- Speaker Cards -->
+    <div class="speakers">
+      <div class="card ai">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Dr. Sarah Chen" />
+        <div class="card-content">
+          <h3>Dr. Sarah Chen</h3>
+          <p class="category">AI & Machine Learning</p>
+          <p>Expert in neural networks and machine learning with 15+ years of experience.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+
+      <div class="card robotics">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Dr. Maria Gonzalez" />
+        <div class="card-content">
+          <h3>Dr. Maria Gonzalez</h3>
+          <p class="category">Robotics</p>
+          <p>Developer of humanoid robots and autonomous systems, focusing on human-robot interaction.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+
+      <div class="card space">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Marcus Rodriguez" />
+        <div class="card-content">
+          <h3>Marcus Rodriguez</h3>
+          <p class="category">Space Technology</p>
+          <p>Aerospace engineer working on Mars mission tech and next-gen rocket propulsion systems.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+
+      <div class="card biotech">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Dr. James Park" />
+        <div class="card-content">
+          <h3>Dr. James Park</h3>
+          <p class="category">Biotechnology</p>
+          <p>Pioneer in gene editing and personalized medicine, advancing CRISPR applications.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+
+      <div class="card sustainability">
+        <img
+          src="https://media.istockphoto.com/id/1477871401/photo/portrait-of-happy-young-businesswoman-arms-crossed-with-looking-at-camera-on-white-background.jpg?s=2048x2048&w=is&k=20&c=fRmKDBvPIhkWaFiLxKEdByu7M8QzbOqtbOrTje_H5-4="
+          alt="Lisa Zhang" />
+        <div class="card-content">
+          <h3>Lisa Zhang</h3>
+          <p class="category">Sustainability</p>
+          <p>Founder of renewable energy startups, focusing on solar tech and sustainable transport.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+
+      <div class="card ai">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce" alt="Dr. Priya Sharma" />
+        <div class="card-content">
+          <h3>Dr. Priya Sharma</h3>
+          <p class="category">AI & Machine Learning</p>
+          <p>Researcher in AI safety and ethics, working on responsible AI development and deployment.</p>
+          <button>View Bio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Future Gadget Expo</h3>
+        <p>The premier technology exhibition showcasing tomorrow’s innovations today.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Speakers</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>info@futuregadgetexpo.com</p>
+        <p>(555) 123-4567</p>
+        <p>San Francisco, CA</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2024 Future Gadget Expo. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
